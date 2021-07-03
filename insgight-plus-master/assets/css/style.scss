@@ -230,7 +230,7 @@ p {
 
 /* default-btn&optional-btn */
 
-.default-btn {
+.default-btn, .default-btn-send {
     border: none;
     position: relative;
     display: inline-block;
@@ -247,7 +247,6 @@ p {
     }
     ;
     padding: {
-        left: 50px;
         right: 25px;
         top: 13px;
         bottom: 13px;
@@ -283,6 +282,14 @@ p {
             height: 562.5px;
         }
     }
+}
+
+.default-btn-send {
+    padding-left: 50px;
+}
+
+.default-btn {
+    padding-left: 25px;
 }
 
 .optional-btn {
@@ -5235,6 +5242,30 @@ Page Title Area CSS
 .page-title-area-three {
     background-image: url("../img/about-bg2.jpg");
     position: relative;
+    height: 45vh;
+    z-index: 1;
+    padding: {
+        top: 130px;
+        bottom: 120px;
+    }
+    ;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: .6;
+        height: 100%;
+        z-index: -1;
+    }
+}
+
+.page-title-area-four {
+    background-image: url("../img/innovation.jpg");
+    position: relative;
+    box-shadow: 0 0 5 red;
     height: 45vh;
     z-index: 1;
     padding: {
